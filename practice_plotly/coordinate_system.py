@@ -25,9 +25,9 @@ fig.add_trace(go.Scatter(x=points_x, y=points_y, mode='markers', marker=dict(siz
 
 # Setting of view of the graph
 fig.update_layout(
-    title='Координатна система на площині з точками',
-    xaxis=dict(title='Вісь X'),
-    yaxis=dict(title='Вісь Y'),
+    title='Coordinate system with points',
+    xaxis=dict(title='Axis X'),
+    yaxis=dict(title='Axis Y'),
     showlegend=True
 )
 
