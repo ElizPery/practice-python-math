@@ -15,7 +15,6 @@ fig.add_trace(go.Scatter(x=[-10, 10], y=[0, 0], mode='lines', name='X-axis'))
 # Add points to coordinate line
 fig.add_trace(go.Scatter(x=points_x, y=points_y, mode='markers', name='Points'))
 
-
 # Setting of view of the graph
 fig.update_layout(
     title='Coordinate line with points',
@@ -23,7 +22,6 @@ fig.update_layout(
     yaxis=dict(title='Axis Y'),
     showlegend=True
 )
-
 
 # Show graph
 fig.show()
