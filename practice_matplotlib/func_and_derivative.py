@@ -21,7 +21,7 @@ ax.grid(True, linestyle='-.')
 
 x, y = symbols('x y')
 # We set the function
-fx = x**6+2*x**5-30*x**4+16*x**3-12*x**2+x+3
+fx = -3*x*x + 30*x
 # We calculate the derivative of the function
 dx = diff((fx))
 k = []
@@ -29,13 +29,19 @@ n = []
 l = []
 
 for i in range(1000):
-    j = ((i)*0.001)+3 # We set the interval - starting from 3 - a thousand times one thousandth - will be 1, so the search will go to 4.
+    j = (i)*0.01
     k.append(j)
     n.append(dx.subs(x,j))
     l.append(fx.subs(x,j))
 
+# We visualize the graphs of the function and its derivative
 ax.plot(k,n)
 ax.plot(k,l)
+
+# Visualize the maximum point
+x_element = [5]
+y_element = [75]
+ax.scatter(x_element, y_element, c="red")
 
 # Start drawing graphics
 plt.show()
